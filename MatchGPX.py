@@ -17,6 +17,7 @@ class MatchGPX:
         self.p1 = p1
         self.p2 = p2
         self.color = {0:"red",1:"blue"}
+        self.degree = -1
         
     def __loadSimplifiedPoints(self,p):
         points_a = []
@@ -30,6 +31,14 @@ class MatchGPX:
         return np.asarray(points_a)
 
     def __getSubSequences(self,sequence,window,lenRoute1):
+        groups = np.bincount(sequence)
+        if len(groups)==1 or (len(groups)==2 and groups[0]==0):
+            #1O0 identicals or 100 diferentes
+            if sequence[0]==False:
+                self.degree =100#Nothing 
+            else:
+                self.degree =0 #All
+
         subseq = []
         regionsstart=len(sequence)
         previousReg = False
@@ -48,6 +57,9 @@ class MatchGPX:
         if not sequence[i] and previousReg:
             if i-regionsstart >= window:
                     subseq.append([regionsstart,i-1,route])
+        if len(subseq)==1:
+            if subseq[0][1]>lenRoute1:
+                subseq=[]
         return subseq
         
     def __distance(self,p1,p2): #No se tiene en cuenta la elevacion
@@ -97,9 +109,10 @@ class MatchGPX:
                       self.acc_region_2 += dist
                 point=point2
             self.regions_length.append(distAcc)
-    
-        self.regions_info = np.vstack([self.regions[:,2], self.regions_length, self.regions_loop])
-        self.regions_info = self.regions_info.T
+        self.regions_info = []
+        if len(regions):
+            self.regions_info = np.vstack([self.regions[:,2], self.regions_length, self.regions_loop])
+            self.regions_info = self.regions_info.T
         
         
         self.length1 = self.p1.tracks[0].length_2d()   
@@ -113,6 +126,7 @@ class MatchGPX:
         return (1-self.acc_region_2/self.length2)*100        
 
     def overlap_degree(self):
+        if self.degree >=0: return 100-self.degree
         accOverlap1 = 0    
         for region in self.regions_info:
             if region[0]==0:
@@ -123,7 +137,7 @@ class MatchGPX:
             if region[0]==1:
                 accOverlap2 += region[1]*100/self.length2
         
-        return max(accOverlap1,accOverlap2)  
+        return 100-max(accOverlap1,accOverlap2)  
         
     def draw(self):
         for idx,match in enumerate(self.matches):

@@ -9,7 +9,7 @@ different segments and total distance.
 + Give the relationship between route1 and route2, and viceversa.
 + Give a percentatge value of the inverse of not overlapped areas (1-p)
 
-![alt tag](http://url/to/img.png)
+![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/test1.png)
 
 Requires:
 + GPXPY library

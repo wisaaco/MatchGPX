@@ -7,7 +7,7 @@ different segments and total distance.
 + Draw both trajectories and it highlights the different segments.
 + Give a descriptive information of each track, and segments.
 + Give the relationship between route1 and route2, and viceversa.
-+ Give a percentage value of the inverse of not overlapped areas (1-p)
++ Give a percentage value of the degree of overlapped segments
 
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/test1.png)
 

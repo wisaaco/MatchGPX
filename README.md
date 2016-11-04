@@ -1,6 +1,8 @@
-# MatchGPXCompute the overlapping and the relationship between two GPX trajectories
+# MatchGPX
 
-It uses KDTree algorithm to compute the overlap degree of two gpx tracks. The result is a percentage based on the distance of different sequences per the total distance.
+This class computes the overlapping and the relationship between two GPX trajectories
+
+It uses KDTree algorithm to compute the overlap degree of two GPX tracks. The result is a percentage based on the distance of different sequences per the total distance.
 
 + Draw both trajectories and it highlights the different sequences.
 + Give a descriptive information of each track, and sequences: length, and loop.

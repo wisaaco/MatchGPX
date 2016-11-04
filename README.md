@@ -1,13 +1,13 @@
-# MatchGPX
-Compute the overlapping and the relationship between two GPX trajectories
+# MatchGPXCompute the overlapping and the relationship between two GPX trajectories
 
-It uses KDTree algorithm to compute the overlap degree of two gpx tracks. The result degree is a percentage based on the distance of 
-different sequences and total distance.
+It uses KDTree algorithm to compute the overlap degree of two gpx tracks. The result is a percentage based on the distance of different sequences per the total distance.
 
 + Draw both trajectories and it highlights the different sequences.
 + Give a descriptive information of each track, and sequences: length, and loop.
 + Give the relationship between route1 and route2, and viceversa.
 + Give a percentage value of the degree of overlapped segments
+
+Note:  the usual term is sequence but I prefer to use the term region.
 
 ## Example
 Overlap degree: 67.84% 
@@ -29,13 +29,13 @@ Route: 1 (blue)
                  R6 -- Length: 1478 meters & Loop: 1.0 Perc.: 5.57%
 ```               
 ### More cases:                 
-12.0640%
+Overlap degree: 12.0640%
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex2.png)
 
-0%
+Overlap degree: 0%
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex3.png)
 
-0%
+Overlap degree: 0%
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex4.png)
 
 

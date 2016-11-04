@@ -5,7 +5,7 @@ It uses KDTree algorithm to compute the overlap degree of two gpx tracks. The re
 different sequences and total distance.
 
 + Draw both trajectories and it highlights the different sequences.
-+ Give a descriptive information of each track, and sequences.
++ Give a descriptive information of each track, and sequences: length, and loop.
 + Give the relationship between route1 and route2, and viceversa.
 + Give a percentage value of the degree of overlapped segments
 
@@ -39,7 +39,7 @@ Route: 1 (blue)
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex4.png)
 
 
-Requires:
+# Requires:
 + GPXPY library
 + Scipy - KDTree
 + geopy.distance

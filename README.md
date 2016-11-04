@@ -9,7 +9,7 @@ different segments and total distance.
 + Give the relationship between route1 and route2, and viceversa.
 + Give a percentage value of the degree of overlapped segments
 
-![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/test1.png)
+![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex1.png)
 
 Requires:
 + GPXPY library

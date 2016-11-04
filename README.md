@@ -27,7 +27,7 @@ Route: 1 (blue)
                  R4 -- Length: 50 meters & Loop: 1.0 Perc.: 0.19%
                  R5 -- Length: 64 meters & Loop: 1.0 Perc.: 0.24%
                  R6 -- Length: 1478 meters & Loop: 1.0 Perc.: 5.57%
-'''                 
+```               
 ### More cases:                 
 12.0640%
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex2.png)

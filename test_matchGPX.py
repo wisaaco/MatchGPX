@@ -9,12 +9,10 @@ import MatchGPX
 
 
 path="gpx/"
-#route1 = "12488613.gpx"
-#route2 = "11483076.gpx"
-#route1 = "11483076.gpx"
 
-route1 = "thun_1_even.gpx"
-route2 = "thun_2_even.gpx"
+
+route1 = "5057009.gpx"
+route2 = "7221030.gpx"
 
 f1 = open(path+route1)
 p1 = gpxpy.parse(f1)
@@ -28,15 +26,7 @@ tolerance = 0.0005
 match = MatchGPX.MatchGPX(p1,p2)
 match.fit(3,tolerance)
 
-
-print match.get_matchR1R2()
-print match.get_matchR2R1()
-
-
-
 match.info()
-
 match.draw()
-
 
 print "Overlap degree: %0.2f%% " %match.overlap_degree()

@@ -1,15 +1,15 @@
 # MatchGPX
 
-This class computes the overlapping and the relationship between two GPX trajectories
+This algorithm computes the overlapping through the number of common segments between two GPS trajectories.
 
-It uses KDTree algorithm to compute the overlap degree of two GPX tracks. The result is a percentage based on the distance of different sequences per the total distance.
+It uses KDTree algorithm to compute the overlap degree of two GPX tracks. The result is a percentage based on the distance of different segments per the total distance.
 
-+ Draw both trajectories and it highlights the different sequences.
-+ Give a descriptive information of each track, and sequences: length, and loop.
-+ Give the relationship between route1 and route2, and viceversa.
-+ Give a percentage value of the degree of overlapped segments
++ It draws both trajectories and highlights the segments.
++ It returns a descriptive information of each track, and sequences: length, and loop.
++ It returns a list of segments between route1 and route2, and viceversa.
++ It returns a percentage value of the degree of each overlapped segment.
 
-Note:  the usual term is sequence but I prefer to use the term region.
+Note: In the code, the usual term is sequence but I prefer to use the term region.
 
 ## Example
 Overlap degree: 67.84% 
@@ -41,7 +41,7 @@ Overlap degree: 0%
 ![alt tag](https://github.com/wisaaco/MatchGPX/blob/master/images/ex4.png)
 
 
-# Requires:
+# It requires:
 + GPXPY library
 + Scipy - KDTree
 + geopy.distance
